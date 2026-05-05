@@ -1,0 +1,44 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-berry: #6b1f4e;
+  --color-berry-muted: #8b3d6a;
+  --color-berry-accent: #c0396b;
+  --color-gold: #d4a843;
+  --color-gold-deep: #b8923a;
+  --color-blush: #faf0f5;
+  --font-sans: ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  @apply bg-neutral-200 antialiased;
+  font-family: var(--font-sans);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes swipeHint {
+  0%,
+  100% {
+    transform: translateX(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateX(10px) rotate(2deg);
+  }
+}
